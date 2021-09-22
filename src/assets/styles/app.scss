@@ -1,0 +1,101 @@
+$font-gabriela: 'Gabriela', sans-serif;
+$font-bilbo: 'Bilbo Swash Caps', cursive;
+
+$color-bg: #e3e3e3;
+$color-primary: #c3c4c4;
+$color-highlight: #c61e1e;
+
+body {
+	background: $color-bg url('/img/bg.jpg') no-repeat center;
+	background-size: cover;
+	margin: 0 1em;
+	font: 50px/50px $font-gabriela;
+	text-align: center;
+	word-break: break-word;
+}
+
+/*--------elements---------*/
+h1 {
+	color: $color-primary;
+	margin: 45px auto 0 auto;
+	max-width: 1100px;
+
+	span {
+		font: 1em/1em $font-gabriela;
+		display: block;
+	}
+	
+	.gradient {
+		line-height: 1em;
+		background: -webkit-linear-gradient(darken($color-primary, 70%), transparent);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	
+	.sub {
+		color: darken($color-primary, 20%);
+		font: .3em/1em $font-gabriela;
+		margin-top: 15px;
+	}
+
+	@media screen and (max-width: 798px) {
+		span {
+			font: .5em/1em $font-gabriela;
+		}
+
+		.sub {
+			text-align: center;
+		}
+	}
+}
+
+.highlight {
+	color: $color-highlight;
+}
+
+.button {
+	background: transparent url('/img/gimmebtn.png') no-repeat;
+	width: 200px;
+	height: 200px;
+	border: 0;
+	cursor: pointer;
+	outline: 0;
+}
+
+.section {
+	width: 100%;
+
+	& + .section {
+		margin-top: 1em;
+	}
+}
+
+.resolution {
+	margin: 0 auto;
+	display: block;
+	max-width: 1024px;
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		background: url('/img/divider.png') no-repeat center;
+		background-size: cover;
+		height: 25px;
+		width: 100%;
+		margin: 55px auto;
+	}
+}
+
+.resolution-trigger {
+	display: inline-flex;
+	vertical-align: middle;
+	align-items: center;
+}
+
+
+/*--------footer---------*/
+.copyright {
+	font: .3em/1em $font-gabriela;
+	color: $color-primary;
+}
